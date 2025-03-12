@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Tudo Vende | Casa de Variedades</title>
+
+  <!-- Link para o CSS do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Link para o CSS personalizado (login.css) -->
+  <link href="css/login.css" rel="stylesheet">
+
+  <style>
+    /* Cabeçalho e Rodapé com fundo cinza escuro */
+    .header, .footer {
+      background-color: #000000; /* Cinza escuro */
+      color: white; /* Texto branco */
+      padding: 20px 0;
+    }
+
+    /* Centralização do conteúdo na tela */
+    .login-container {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Estilo do botão de Entrar */
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    /* Card responsivo */
+    .card {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Espaçamento do título */
+    .card-title {
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Espaçamento dos inputs */
+    .form-control {
+      border-radius: 5px;
+    }
+
+    /* Centralização do conteúdo do cabeçalho e rodapé */
+    .header .container, .footer .container {
+      text-align: center;
+    }
+
+    /* Rodapé com estilo */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #000000; /* Cinza escuro */
+      color: white;
+    }
+
+    /* Ajustes no texto do cabeçalho */
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container">
+      <h1>Login</h1>
+    </div>
+  </header>
+
+  <!-- Container de login centralizado -->
+  <div class="login-container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="text-center mb-4">Acessar minha conta</h2>
+
+        <!-- Formulário de Login -->
+        <form class="form-signin" id="login-form">
+          <!-- Campo de E-mail -->
+          <div class="mb-3">
+            <label for="user" class="form-label">Usuário</label>
+            <input onkeyup="validarCampos()" type="text" id="user" class="form-control" placeholder="Usuário">
+          </div>
+
+          <!-- Campo de Senha -->
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input onkeyup="validarCampos()" type="password" id="senha" class="form-control" placeholder="Senha">
+          </div>
+
+          <!-- Checkbox -->
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox"> Salvar meus dados de acesso
+            </label>
+          </div>
+
+          <!-- Botão de Entrar -->
+          <a id="botão-entrar" class="btn btn-custom btn-lg btn-block w-100" href="javascript:entrar()">Entrar</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Tudo Vende - Casa de Variedades. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="text/javascript">
+    var camposValidos = false;
+
+    var usuarios = [
+      {
+        nome: "admin@admin.com",
+        senha: "admin123"
+      },
+    ];
+
+    const campoUsuario = document.getElementById('user');
+    const campoSenha = document.getElementById('senha');
+
+    function validarCampos() {
+      if (campoUsuario.value.length >= 4 && campoSenha.value.length >= 6) {
+        camposValidos = true;
+      } else {
+        camposValidos = false;
+      }
+    }
+
+    function entrar() {
+      if (!camposValidos) {
+        alert("Preencha corretamente as credenciais de acesso!");
+      } else {
+        let usuarioEncontrado = false;
+        // Itera sobre os usuários para validar as credenciais
+        for (let usuario of usuarios) {
+          console.log(`Verificando: ${usuario.nome} - Senha: ${usuario.senha}`); // Verificação no console
+          if (usuario.nome === campoUsuario.value && usuario.senha === campoSenha.value) {
+            usuarioEncontrado = true;
+            // Redireciona para a página "negociacaopokemon"
+            window.location.href = "file:///C:/Users/HOUSE/Negociacaopokemon.html"; 
+            break;
+          }
+        }
+        if (!usuarioEncontrado) {
+          alert("Usuário ou senha incorretos, verifique as credenciais e tente novamente!");
+        }
+      }
+    }
+
+    // Adicionando preventDefault para não enviar o formulário
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      entrar();
+    });
+
+    window.onload = function() {
+      validarCampos();
+    }
+  </script>
+</body>
+
+</html>

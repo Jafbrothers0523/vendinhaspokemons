@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Cartas Pokémon</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 3em;
+            color: #ffffff; 
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .card img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card-content {
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        .card h2 {
+            font-size: 2em;
+            color: #ffcb05;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #ff5733;
+        }
+
+        
+        .price-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .price-section div {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .price-section h3 {
+            font-size: 2em;
+            color: #ffcb05;
+        }
+
+        .price-section p {
+            font-size: 1.5em;
+            color: #ff5733;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card img {
+                margin-bottom: 15px;
+            }
+
+            .card-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Venda de Cartas Pokémon</h1>
+
+    <div class="container">
+        
+        <div class="card">
+            <img src="https://repositorio.sbrauble.com/arquivos/in/pokemon_bkp/cd/439/654509fe102fd-y9oq8-582yd-547d72be284b44ee1574559ed9230efb.jpg" alt="Lua Estrondo EX">
+            <div class="card-content">
+                <h2>Lua Estrondo EX</h2>
+                <p class="price">R$ 99,70</p>
+                <p>A carta Lua Estrondo EX é uma das mais poderosas e raras, conhecida por seu impacto devastador nas batalhas Pokémon.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/51OCYYPc5KL._AC_UF894,1000_QL80_.jpg" alt="Latios Full Art">
+            <div class="card-content">
+                <h2>Latios Full Art</h2>
+                <p class="price">R$ 139,99</p>
+                <p>Latios Full Art é uma carta incrivelmente detalhada, com um design impressionante. Muito procurada por colecionadores pela sua beleza e raridade.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrpMv7hS8oZQ8O9aM10QYtK9EjEi01NZrlBg&s" alt="Mélia Treinadora">
+            <div class="card-content">
+                <h2>Mélia Treinadora</h2>
+                <p class="price">R$ 44,70</p>
+                <p>Mélia é uma treinadora famosa do universo Pokémon. Sua carta é altamente valorizada por fãs da série e colecionadores de cartas de treinador.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/61JZYx86ggL.jpg" alt="Ampharos EX">
+            <div class="card-content">
+                <h2>Ampharos EX</h2>
+                <p class="price">R$ 24,99</p>
+                <p>Ampharos EX é uma carta poderosa que pode vir a ser decisiva em batalhas. A carta EX é muito cobiçada por colecionadores por sua raridade e habilidades.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://img.mypcards.com/img/2/2181/pokemon_ssp_193_191/pokemon_ssp_193_191_pt.jpg" alt="Vivillon Full Art">
+            <div class="card-content">
+                <h2>Vivillon Full Art</h2>
+                <p class="price">R$ 19,70</p>
+                <p>Vivillon Full Art é uma carta cheia de detalhes, com um design deslumbrante, muito cobiçada tanto por colecionadores quanto por jogadores.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://repositorio.sbrauble.com/arquivos/in/pokemon_bkp/cd/411/1631s_038.jpg" alt="Ninetales EX">
+            <div class="card-content">
+                <h2>Ninetales EX</h2>
+                <p class="price">R$ 09,90</p>
+                <p>Ninetales EX é uma carta extremamente rara e poderosa, muito procurada por colecionadores.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://repositorio.sbrauble.com/arquivos/in/pokemon_bkp/cd/134/134_25.jpg" alt="Blastoise">
+            <div class="card-content">
+                <h2>Blastoise</h2>
+                <p class="price">R$ 14,70</p>
+                <p>Blastoise é um dos mais icônicos pokémons, com uma carta cheia de história e grande valor no mercado.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbPKWbU1wpFMGJtRBS4QenWqiuLkmUu3uiIQ&s " alt="Dachsbun EX">
+            <div class="card-content">
+                <h2>Dachsbun EX</h2>
+                <p class="price">R$ 09,90</p>
+                <p>Dachsbun EX tem habilidades incríveis e é muito valorizada por colecionadores e jogadores por sua fofura.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/618Lig3bsML.jpg " alt="Dachsbun EX">
+            <div class="card-content">
+                <h2>Cartas Super Raras</h2>
+                <p class="price">R$ 5,00</p>
+                <p>Cartas de pokemon sortidas aleatoriamente .</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/618Lig3bsML.jpg " alt="Dachsbun EX">
+            <div class="card-content">
+                <h2>Cartas Raras</h2>
+                <p class="price">R$ 1,00</p>
+                <p>Cartas de pokemon sortidas aleatoriamente .</p>
+            </div>
+        </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/618Lig3bsML.jpg " alt="Dachsbun EX">
+                <div class="card-content">
+                    <h2>Cartas incomuns</h2>
+                    <p class="price">R$ 0,50</p>
+                    <p>Cartas de pokemon sortidas aleatoriamente .</p>
+                </div>
+            </div>
+       
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/618Lig3bsML.jpg " alt="Dachsbun EX">
+                <div class="card-content">
+                    <h2>Cartas Comuns</h2>
+                    <p class="price">R$ 0,25</p>
+                    <p>Cartas de pokemon sortidas aleatoriamente .</p>
+                </div>
+            </div>
+
+
+
+    </div>
+
+</body>
+</html>

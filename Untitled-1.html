@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site One Page com Bootstrap</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px; /* Ajuste o padding superior para garantir que o conteúdo não fique oculto sob o cabeçalho fixo */
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+    <a class="navbar-brand" href="#">Meu Site</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfólio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#fale-comigo">Fale comigo</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section id="inicio" class="py-5">
+    <div class="container">
+        <h1>Início</h1>
+        <p>Conteúdo da seção Início...</p>
+    </div>
+</section>
+
+<section id="sobre" class="py-5 bg-light">
+    <div class="container">
+        <h1>Sobre</h1>
+        <p>Conteúdo da seção Sobre...</p>
+    </div>
+</section>
+
+<section id="servicos" class="py-5">
+    <div class="container">
+        <h1>Serviços</h1>
+        <p>Conteúdo da seção Serviços...</p>
+    </div>
+</section>
+
+<section id="portfolio" class="py-5 bg-light">
+    <div class="container">
+        <h1>Portfólio</h1>
+        <p>Conteúdo da seção Portfólio...</p>
+    </div>
+</section>
+
+<section id="fale-comigo" class="py-5">
+    <div class="container">
+        <h1>Fale comigo</h1>
+        <p>Conteúdo da seção Fale comigo...</p>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
